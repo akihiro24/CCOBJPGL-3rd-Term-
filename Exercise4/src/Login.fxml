@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <ImageView fitHeight="647.0" fitWidth="1002.0">
+         <image>
+            <Image url="@../../../../Downloads/Dating-App-UI-Kits.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="151.0" fitWidth="613.0" layoutX="388.0" layoutY="476.0" opacity="0.75">
+         <image>
+            <Image url="@../../../../Downloads/pngwing.com%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="186.0" fitWidth="808.0" layoutX="182.0" layoutY="93.0">
+         <image>
+            <Image url="@../../../../Downloads/pngwing.com%20(2).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="382.0" layoutY="67.0" text="Welcome to">
+         <font>
+            <Font name="Forte" size="48.0" />
+         </font>
+         <effect>
+            <Bloom>
+               <input>
+                  <Glow level="0.58" />
+               </input>
+            </Bloom>
+         </effect>
+      </Label>
+      <PasswordField fx:id="mypasswordfield" layoutX="440.0" layoutY="359.0" prefHeight="25.0" prefWidth="236.0" promptText="Enter Your Password Here" />
+      <TextField fx:id="mytextfield" layoutX="439.0" layoutY="297.0" prefHeight="25.0" prefWidth="236.0" promptText="Enter Your Username Here" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+
+      <Label layoutX="320.0" layoutY="293.0" text="Username:">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="357.0" text="Password:">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="myloginbutton" layoutX="383.0" layoutY="396.0" mnemonicParsing="false" onAction="#login" prefHeight="64.0" prefWidth="236.0" text="Login">
+         <font>
+            <Font name="Impact" size="34.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="128.0" fitWidth="129.0" layoutX="37.0" layoutY="29.0" opacity="0.62">
+         <image>
+            <Image url="@../../../../Downloads/pngwing.com.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="290.0" layoutY="118.0" text="HANAP AWOJ" textFill="#e10000">
+         <font>
+            <Font name="Forte" size="64.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0">
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Shadow>
+                     </bumpInput>
+                     <light>
+                        <Light.Distant>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Light.Distant>
+                     </light>
+                  </Lighting>
+               </input>
+            </Bloom>
+         </effect>
+      </Label>
+      <Label fx:id="mywarninglabel" layoutX="292.0" layoutY="467.0" text="Incorrect Username/Password, Try Again!" textFill="#b50606" visible="false">
+         <font>
+            <Font name="Impact" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
